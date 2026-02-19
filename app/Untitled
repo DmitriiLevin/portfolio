@@ -1,0 +1,25 @@
+TASK: Remove artificial vertical stretching that creates large empty space above footer.
+
+In layout.tsx:
+
+1. Remove `flex` and `flex-col` from <body>.
+2. Remove `flex-1` from <main>.
+3. Remove min-h-screen if present on <body> or wrapper.
+
+Structure should be:
+
+<body>
+  <Navbar />
+  <main>
+    {children}
+  </main>
+  <Footer />
+</body>
+
+Do NOT add any additional spacing.
+Do NOT modify footer padding.
+Just remove layout stretching behavior.
+
+Goal:
+Footer should sit immediately after content.
+No artificial vertical space.
