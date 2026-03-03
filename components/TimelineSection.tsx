@@ -25,44 +25,70 @@ const descriptionClass =
 
 export default function TimelineSection({ title, items }: TimelineSectionProps) {
   return (
-    <section className="grid grid-cols-1 gap-x-6 gap-y-8 pt-0 sm:gap-x-8 lg:grid-cols-[240px_240px_1fr] lg:items-start">
-      {/* Header row: section title + empty columns (desktop only) */}
+    <section className="pt-0">
       <h2 className={sectionTitleClass}>{title}</h2>
-      <div className="hidden lg:block" aria-hidden />
-      <div className="hidden lg:block" aria-hidden />
-      {/* Entry rows: spacer, date, content (each row wrapped in contents) */}
-      {items.map((item, i) => (
-        <div key={i} className="contents">
-          {/* Desktop: spacer column, Mobile: hidden */}
-          <div className={`${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} hidden lg:block`} aria-hidden />
-          {/* Date column */}
-          <div className={`${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} min-w-0`}>
-            {item.period && (
-              <p className={periodClass}>{item.period}</p>
-            )}
-          </div>
-          {/* Content column */}
-          <div className={`space-y-2 ${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} min-w-0`}>
-            <p className={orgClass}>{item.org}</p>
-            <p className={titleClass}>{item.title}</p>
-            {item.description && (
-              <p className={descriptionClass}>{item.description}</p>
-            )}
-          </div>
-          {/* Mobile divider between entries */}
-          {i < items.length - 1 && (
+
+      {/* Mobile / tablet: stacked cards — date, org, title, description */}
+      <div className="mt-6 space-y-0 sm:mt-8 lg:hidden">
+        {items.map((item, i) => (
+          <div key={i}>
             <div
-              className="col-span-full h-px bg-neutral-200 dark:bg-white/10 lg:hidden"
+              className={`space-y-2 min-w-0 ${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"}`}
+            >
+              {item.period && (
+                <p className={periodClass}>{item.period}</p>
+              )}
+              <p className={orgClass}>{item.org}</p>
+              <p className={titleClass}>{item.title}</p>
+              {item.description && (
+                <p className={descriptionClass}>{item.description}</p>
+              )}
+            </div>
+            {i < items.length - 1 && (
+              <div
+                className="h-px bg-neutral-200 dark:bg-white/10"
+                aria-hidden
+              />
+            )}
+          </div>
+        ))}
+        <div
+          className="h-px bg-neutral-200 dark:bg-white/10"
+          aria-hidden
+        />
+      </div>
+
+      {/* Desktop: 3-column grid (spacer | date | content) */}
+      <div className="hidden lg:grid lg:grid-cols-[240px_240px_1fr] lg:gap-x-8 lg:gap-y-8 lg:items-start">
+        <div aria-hidden />
+        <div aria-hidden />
+        {items.map((item, i) => (
+          <Fragment key={i}>
+            <div
+              className={`${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} min-w-0`}
               aria-hidden
             />
-          )}
-        </div>
-      ))}
-      {/* Divider under section (full width of content area) */}
-      <div
-        className="col-span-full h-px bg-neutral-200 dark:bg-white/10"
-        aria-hidden
-      />
+            <div className={`${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} min-w-0`}>
+              {item.period && (
+                <p className={periodClass}>{item.period}</p>
+              )}
+            </div>
+            <div
+              className={`space-y-2 ${i === 0 ? "pb-6 sm:pb-8" : "py-6 sm:py-8"} min-w-0`}
+            >
+              <p className={orgClass}>{item.org}</p>
+              <p className={titleClass}>{item.title}</p>
+              {item.description && (
+                <p className={descriptionClass}>{item.description}</p>
+              )}
+            </div>
+          </Fragment>
+        ))}
+        <div
+          className="col-span-full h-px bg-neutral-200 dark:bg-white/10"
+          aria-hidden
+        />
+      </div>
     </section>
   );
 }
