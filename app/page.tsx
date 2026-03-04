@@ -49,27 +49,25 @@ export default function Home() {
     <main style={{ background: "#0e0e0e", minHeight: "100vh" }}>
       
       {/* HERO */}
-      <div style={{ 
+      <div className="overflow-hidden min-w-0" style={{ 
         maxWidth: "1136px", 
         margin: "0 auto", 
-        padding: "clamp(40px, 6vw, 80px) clamp(16px, 4vw, 48px) 60px" 
+        padding: "clamp(40px, 6vw, 80px) max(20px, clamp(16px, 4vw, 48px)) 60px" 
       }}>
-        <h1 style={{ 
+        <h1 className="max-w-full min-w-0" style={{ 
           fontSize: "clamp(32px, 5vw, 56px)", 
           fontWeight: 500, 
           color: "#ffffff", 
-          lineHeight: "64px", 
+          lineHeight: "1.15", 
           marginBottom: "24px", 
           maxWidth: "700px" 
         }}>
           Hi, I&apos;m Dima Levin
         </h1>
-        <p style={{ 
-          fontSize: "32px", 
+        <p className="text-xl sm:text-3xl max-w-full min-w-0 break-words overflow-hidden" style={{ 
           fontWeight: 400, 
           color: "#888888", 
-          lineHeight: "40px",
-          whiteSpace: "nowrap"
+          lineHeight: "1.25"
         }}>
           Senior Product Designer at Creative Fabrica, based in Warsaw.
         </p>
@@ -91,10 +89,10 @@ export default function Home() {
       </div>
 
       {/* PROJECTS */}
-      <div style={{ 
+      <div className="min-w-0 overflow-hidden" style={{ 
         maxWidth: "1136px", 
         margin: "120px auto 0", 
-        padding: "0 clamp(16px, 4vw, 48px) 80px",
+        padding: "0 max(20px, clamp(16px, 4vw, 48px)) 80px",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
         gap: "24px"

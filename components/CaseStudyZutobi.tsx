@@ -83,8 +83,8 @@ export default function CaseStudyZutobi() {
   const experiment = experiments.find(e => e.id === activeExp)!;
 
   return (
-    <main className="w-full px-4 md:px-6" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
-      <div>
+    <main className="w-full px-4 md:px-6 overflow-x-hidden" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
+      <div className="max-w-full overflow-hidden">
 
         <FadeIn>
           <div className="mb-28">
@@ -92,21 +92,21 @@ export default function CaseStudyZutobi() {
             <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
               Growth Experiments<br />on Onboarding
             </h1>
-            <p style={{ color: "#888888", fontSize: "22px", lineHeight: "34px", maxWidth: "600px" }}>
+            <p className="text-base md:text-xl max-w-full overflow-hidden" style={{ color: "#888888", lineHeight: "1.5" }}>
               Three sequential A/B experiments that improved Install-to-Trial conversion — and revealed the hidden tradeoffs between clarity, trust, and retention.
             </p>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="flex gap-8 md:gap-16 mb-28" style={{ alignItems: "center" }}>
-            <div>
-              <p style={{ fontSize: "72px", fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+7%</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 mb-28 w-full">
+            <div className="w-full md:w-auto">
+              <p className="text-4xl sm:text-6xl md:text-[72px]" style={{ fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+7%</p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Best experiment lift</p>
             </div>
-            <div style={{ width: "1px", background: "#222222", alignSelf: "stretch" }} />
-            <div>
-              <p style={{ fontSize: "48px", fontWeight: 500, color: "#555555", lineHeight: 1 }}>3</p>
+            <div className="hidden md:block flex-shrink-0" style={{ width: "1px", background: "#222222", alignSelf: "stretch", minHeight: "40px" }} />
+            <div className="w-full md:w-auto">
+              <p className="text-4xl sm:text-6xl md:text-[48px]" style={{ fontWeight: 500, color: "#555555", lineHeight: 1 }}>3</p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Sequential experiments</p>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function CaseStudyZutobi() {
         <FadeIn>
           <div className="mb-28">
             <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               Zutobi is a driving education app for the US market. Users install the app, go through onboarding, and hit a paywall before accessing the full course content. The core growth challenge was converting free installs into paying trial subscribers.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function CaseStudyZutobi() {
         <FadeIn>
           <div className="mb-28">
             <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The challenge</h2>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               The existing paywall was feature-rich but lacked one thing: clarity about what users were actually signing up for. We ran three sequential experiments, each building on the learnings of the previous one — treating the onboarding and paywall as a system, not isolated screens.
             </p>
           </div>
@@ -170,11 +170,11 @@ export default function CaseStudyZutobi() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <div>
                 <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Context</p>
-                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }}>{experiment.context}</p>
+                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.context}</p>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Hypothesis</p>
-                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }}>{experiment.hypothesis}</p>
+                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.hypothesis}</p>
               </div>
             </div>
 

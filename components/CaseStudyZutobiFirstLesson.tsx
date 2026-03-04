@@ -49,8 +49,8 @@ export default function CaseStudyZutobiFirstLesson() {
   const variant = variants.find(v => v.id === active)!;
 
   return (
-    <main className="w-full px-4 md:px-6" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
-      <div>
+    <main className="w-full px-4 md:px-6 overflow-x-hidden" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
+      <div className="max-w-full overflow-hidden">
 
         {/* HERO */}
         <FadeIn>
@@ -59,7 +59,7 @@ export default function CaseStudyZutobiFirstLesson() {
             <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
               First Lesson Activation
             </h1>
-            <p style={{ color: "#888888", fontSize: "22px", lineHeight: "34px", maxWidth: "600px" }}>
+            <p className="text-base md:text-xl max-w-full overflow-hidden" style={{ color: "#888888", lineHeight: "1.5" }}>
               How prompting users to start their first lesson immediately after subscribing improved both trial retention and paid conversion.
             </p>
           </div>
@@ -67,14 +67,14 @@ export default function CaseStudyZutobiFirstLesson() {
 
         {/* METRICS */}
         <FadeIn delay={0.1}>
-          <div className="flex gap-8 md:gap-16 mb-28" style={{ alignItems: "center" }}>
-            <div>
-              <p style={{ fontSize: "72px", fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+5.15%</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 mb-28 w-full">
+            <div className="w-full md:w-auto">
+              <p className="text-4xl sm:text-6xl md:text-[72px]" style={{ fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+5.15%</p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Install-to-Trial conversion</p>
             </div>
-            <div style={{ width: "1px", background: "#222222", alignSelf: "stretch" }} />
-            <div>
-              <p style={{ fontSize: "48px", fontWeight: 500, color: "#555555", lineHeight: 1 }}>+4.82%</p>
+            <div className="hidden md:block flex-shrink-0" style={{ width: "1px", background: "#222222", alignSelf: "stretch", minHeight: "40px" }} />
+            <div className="w-full md:w-auto">
+              <p className="text-4xl sm:text-6xl md:text-[48px]" style={{ fontWeight: 500, color: "#555555", lineHeight: 1 }}>+4.82%</p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Trial-to-Paid conversion</p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function CaseStudyZutobiFirstLesson() {
         <FadeIn>
           <div className="mb-28">
             <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The problem</h2>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               25% of users cancelled their trial within the first 10 minutes — often before engaging with any core functionality. They subscribed, but never experienced the product's value. The problem wasn't the paywall. It was what happened right after it.
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function CaseStudyZutobiFirstLesson() {
         <FadeIn>
           <div className="mb-28">
             <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The insight</h2>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               Analytics revealed a strong correlation: users who completed the first lesson had a conversion rate of 18.1%, while users who did not complete it converted at only 10.1%. The data pointed to one clear lever — get users to start their first lesson as early as possible.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function CaseStudyZutobiFirstLesson() {
         <FadeIn>
           <div className="mb-28">
             <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The approach</h2>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               We researched how other education apps handle the moment right after subscription — and found that most simply drop users into a home screen. We hypothesized that a focused entry point directly into the first lesson would reduce cognitive load and guide users toward the action most likely to drive retention.
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function CaseStudyZutobiFirstLesson() {
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px", marginBottom: "24px" }}>
               Variant 2 outperformed both the control and Variant 1 across all key metrics. By removing the decision entirely — no pop-up, no extra tap — users were immediately inside the product doing the one thing most likely to make them stay.
             </p>
-            <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
               The experiment confirmed that early and focused user activation has a measurable impact on conversion and engagement — directing users to start the first lesson immediately after subscribing resulted in higher Trial-to-Paid and Install-to-Trial conversion rates.
             </p>
           </div>

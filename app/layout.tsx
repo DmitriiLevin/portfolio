@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="antialiased font-sans bg-background text-foreground">
-        <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 32px" }}>
+        <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 max(20px, 32px)" }} className="relative z-20 bg-background">
           <Navbar />
         </div>
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 32px" }}>
           <Footer />
         </div>

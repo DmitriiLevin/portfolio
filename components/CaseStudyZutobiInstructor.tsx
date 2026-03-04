@@ -89,8 +89,8 @@ export default function CaseStudyZutobiInstructor() {
   const feature = features[activeFeature];
 
   return (
-    <main className="w-full px-4 md:px-6" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
-      <div>
+    <main className="w-full px-4 md:px-6 overflow-x-hidden" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
+      <div className="max-w-full overflow-hidden">
 
         {/* HERO */}
         <section style={{ marginBottom: "80px" }}>
@@ -101,7 +101,7 @@ export default function CaseStudyZutobiInstructor() {
           <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(28px, 5vw, 56px)" }}>
             Zutobi Instructor —<br />A Platform for Driving Schools
           </h1>
-          <p className="text-[20px] leading-[32px] text-[#888888] max-w-[640px] mb-8">
+          <p className="text-base md:text-xl max-w-full overflow-hidden text-[#888888] leading-relaxed mb-8">
             Designing an MVP for US driving schools from zero — replacing spreadsheets with a focused scheduling and student management tool.
           </p>
           <div className="flex flex-wrap gap-6 mb-8">
