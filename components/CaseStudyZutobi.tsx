@@ -83,13 +83,13 @@ export default function CaseStudyZutobi() {
   const experiment = experiments.find(e => e.id === activeExp)!;
 
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
+    <main className="w-full px-4 md:px-6" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
       <div>
 
         <FadeIn>
           <div className="mb-28">
             <p className="text-sm mb-4" style={{ color: "#555555" }}>Zutobi · 2022–2025</p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
               Growth Experiments<br />on Onboarding
             </h1>
             <p style={{ color: "#888888", fontSize: "22px", lineHeight: "34px", maxWidth: "600px" }}>
@@ -99,7 +99,7 @@ export default function CaseStudyZutobi() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="flex gap-16 mb-28" style={{ alignItems: "center" }}>
+          <div className="flex gap-8 md:gap-16 mb-28" style={{ alignItems: "center" }}>
             <div>
               <p style={{ fontSize: "72px", fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+7%</p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Best experiment lift</p>
@@ -135,7 +135,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The product</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               Zutobi is a driving education app for the US market. Users install the app, go through onboarding, and hit a paywall before accessing the full course content. The core growth challenge was converting free installs into paying trial subscribers.
             </p>
@@ -144,7 +144,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The challenge</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The challenge</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               The existing paywall was feature-rich but lacked one thing: clarity about what users were actually signing up for. We ran three sequential experiments, each building on the learnings of the previous one — treating the onboarding and paywall as a system, not isolated screens.
             </p>
@@ -153,7 +153,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-8">
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What we tested</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-10">
               {experiments.map(e => (
                 <button key={e.id} onClick={() => setActiveExp(e.id)} className="text-sm rounded-full px-4 py-1.5 transition" style={{ border: `1px solid ${activeExp === e.id ? "#ffffff" : "#222222"}`, color: activeExp === e.id ? "#ffffff" : "#555555", background: "transparent", cursor: "pointer" }}>
@@ -167,7 +167,7 @@ export default function CaseStudyZutobi() {
         <FadeIn key={activeExp}>
           <div className="mb-28">
             <h3 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "28px" }}>{experiment.title}</h3>
-            <div className="grid grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <div>
                 <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Context</p>
                 <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }}>{experiment.context}</p>
@@ -254,7 +254,7 @@ export default function CaseStudyZutobi() {
             </div>
             )}
 
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {experiment.metrics.map((m, i) => (
                 <div key={i} className="rounded-xl p-5" style={{ background: "#161616" }}>
                   <p className="font-medium mb-1" style={{ color: "#ffffff", fontSize: "28px" }}>{m.value}</p>
@@ -272,8 +272,8 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div>
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What I took away</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What I took away</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Trust reduces friction", body: "Even a single informational block explaining how a trial works can meaningfully lift conversion. Users don't need convincing — they need clarity." },
                 { n: "02", title: "Clarity has tradeoffs", body: "The minimal paywall improved trial starts but increased post-trial cancellations. Transparency must be paired with strong value delivery during the trial." },

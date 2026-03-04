@@ -52,7 +52,7 @@ export default function Home() {
       <div style={{ 
         maxWidth: "1136px", 
         margin: "0 auto", 
-        padding: "80px clamp(16px, 4vw, 48px) 0" 
+        padding: "clamp(40px, 6vw, 80px) clamp(16px, 4vw, 48px) 60px" 
       }}>
         <h1 style={{ 
           fontSize: "clamp(32px, 5vw, 56px)", 
@@ -94,7 +94,10 @@ export default function Home() {
       <div style={{ 
         maxWidth: "1136px", 
         margin: "120px auto 0", 
-        padding: "0 clamp(16px, 4vw, 48px) 120px"
+        padding: "0 clamp(16px, 4vw, 48px) 80px",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+        gap: "24px"
       }}>
         {projects.map((p, i) => {
           const imageSrc = p.image || `https://picsum.photos/seed/${i + 10}/1400/700`;
@@ -105,16 +108,16 @@ export default function Home() {
           <Link
             key={i}
             href={p.href || "#"}
-            style={{ display: "block", textDecoration: "none", marginBottom: "120px" }}
+            style={{ display: "block", textDecoration: "none" }}
           >
             {/* IMAGE */}
-            <div style={{ borderRadius: "12px", overflow: "hidden", width: "100%" }}>
+            <div style={{ borderRadius: "12px", overflow: "hidden", width: "100%", aspectRatio: "4/3" }}>
               <img
                 src={imageSrc}
                 alt={p.title}
                 style={{
                   width: "100%",
-                  height: "520px",
+                  height: "100%",
                   objectFit: "cover",
                   display: "block",
                   transform: "scale(1)",

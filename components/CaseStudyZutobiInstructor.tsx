@@ -89,7 +89,7 @@ export default function CaseStudyZutobiInstructor() {
   const feature = features[activeFeature];
 
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
+    <main className="w-full px-4 md:px-6" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
       <div>
 
         {/* HERO */}
@@ -98,7 +98,7 @@ export default function CaseStudyZutobiInstructor() {
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 inline-block" />
             Zutobi · B2B SaaS · Product Design
           </p>
-          <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(32px, 5vw, 56px)" }}>
+          <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(28px, 5vw, 56px)" }}>
             Zutobi Instructor —<br />A Platform for Driving Schools
           </h1>
           <p className="text-[20px] leading-[32px] text-[#888888] max-w-[640px] mb-8">
@@ -142,7 +142,7 @@ export default function CaseStudyZutobiInstructor() {
         <FadeIn>
           <section style={{ maxWidth: "720px" }}>
             <Label>The problem</Label>
-            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(22px, 4vw, 40px)" }}>
               Driving schools were running on spreadsheets
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-6">
@@ -157,7 +157,7 @@ export default function CaseStudyZutobiInstructor() {
         <FadeIn>
           <section style={{ maxWidth: "720px" }}>
             <Label>Research</Label>
-            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(22px, 4vw, 40px)" }}>
               Talking to real instructors
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-8">
@@ -197,7 +197,7 @@ export default function CaseStudyZutobiInstructor() {
         {/* SOLUTION */}
         <FadeIn>
           <Label>Solution</Label>
-          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-4" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
+          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-4" style={{ fontSize: "clamp(22px, 4vw, 40px)" }}>
             Built around the instructor&apos;s daily workflow
           </h2>
           <p className="text-[18px] leading-[30px] text-[#888888] max-w-[720px] mb-10">
@@ -245,7 +245,7 @@ export default function CaseStudyZutobiInstructor() {
         <FadeIn>
           <section style={{ maxWidth: "720px" }}>
             <Label>Outcome</Label>
-            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(22px, 4vw, 40px)" }}>
               From competition entry to real schools
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-6">
@@ -262,7 +262,7 @@ export default function CaseStudyZutobiInstructor() {
         {/* LEARNINGS */}
         <FadeIn>
           <Label>Key learnings</Label>
-          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-10" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
+          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-10" style={{ fontSize: "clamp(22px, 4vw, 40px)" }}>
             What I took away
           </h2>
         </FadeIn>
