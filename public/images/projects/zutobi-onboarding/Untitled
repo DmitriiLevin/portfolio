@@ -1,0 +1,19 @@
+In components/CaseStudyZutobi.tsx, update variant image:
+
+<div 
+  onClick={() => setLightbox(currentVariant.image)}
+  style={{ cursor: "zoom-in" }}
+>
+  <img
+    src={currentVariant.image}
+    alt={currentVariant.label}
+    style={{ 
+      width: "100%", 
+      height: "520px", 
+      borderRadius: "12px", 
+      display: "block",
+      objectFit: "cover",
+      objectPosition: "top"
+    }}
+  />
+</div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
@@ -15,13 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased font-sans">
-        <Container>
+    <html lang="en" className="dark">
+      <body className="antialiased font-sans bg-background text-foreground">
+        <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 32px" }}>
           <Navbar />
-          <main>{children}</main>
+        </div>
+        <main>{children}</main>
+        <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 32px" }}>
           <Footer />
-        </Container>
+        </div>
       </body>
     </html>
   );

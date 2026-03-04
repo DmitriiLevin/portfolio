@@ -1,43 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
-/* Circular: add .woff2 files to public/fonts/ (e.g. Circular-Book.woff2) */
-@font-face {
-  font-family: "Circular";
-  src: url("/fonts/Circular-Book.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Circular";
-  src: url("/fonts/Circular-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0e0e0e;
+  --foreground: #ffffff;
+  --surface: #161616;
+  --border: #222222;
+  --muted: #555555;
+  --secondary: #888888;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Circular", -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-secondary: var(--secondary);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme: override neutrals for minimal dark portfolio */
+.dark {
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #161616;
+  --color-neutral-200: #222222;
+  --color-neutral-300: #222222;
+  --color-neutral-400: #888888;
+  --color-neutral-500: #555555;
+  --color-neutral-600: #555555;
+  --color-neutral-700: #222222;
+  --color-neutral-800: #222222;
+  --color-neutral-900: #161616;
+  --color-neutral-950: #0e0e0e;
+}
+
+/* Ensure dark background applies to html when .dark is used */
+html.dark,
+html {
+  background: #0e0e0e;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Circular", -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #0e0e0e !important;
+  color: #ffffff;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }

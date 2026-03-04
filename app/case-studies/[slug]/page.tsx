@@ -14,5 +14,5 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
   if (slug === "zutobi-first-lesson") return <CaseStudyZutobiFirstLesson />;
 
-  return <div style={{ color: "#e8e4dd", padding: "100px 48px" }}>Case study not found.</div>;
+  return <div style={{ color: "#ffffff", padding: "100px 48px" }}>Case study not found.</div>;
 }

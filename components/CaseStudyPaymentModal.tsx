@@ -69,13 +69,13 @@ export default function CaseStudyPaymentModal() {
         {/* HERO */}
         <FadeIn>
           <div className="mb-32">
-            <p className="text-sm mb-4" style={{ color: "#666360" }}>
+            <p className="text-sm mb-4" style={{ color: "#555555" }}>
               Creative Fabrica · 2025
             </p>
-            <h1 className="font-medium mb-6" style={{ color: "#e8e4dd", fontSize: "56px", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "56px", lineHeight: "64px" }}>
               Free Trial Modal — Timeline Test
             </h1>
-            <p className="max-w-[600px]" style={{ color: "#888580", fontSize: "22px", lineHeight: "34px" }}>
+            <p className="max-w-[600px]" style={{ color: "#888888", fontSize: "22px", lineHeight: "34px" }}>
               How adding a "how the trial works" timeline to the payment modal lifted trial conversions by 3.51% across 73K+ users.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function CaseStudyPaymentModal() {
 
         <FadeIn delay={0.05}>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#e8e4dd" }}>The product</h2>
+            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The product</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               Creative Fabrica is a subscription marketplace for design assets — fonts, graphics, templates, and AI tools for creators. Users sign up for a free trial to get unlimited access, which then converts to a paid subscription.
             </p>
@@ -94,20 +94,20 @@ export default function CaseStudyPaymentModal() {
         <FadeIn delay={0.1}>
           <div className="flex flex-row items-center gap-16 mb-28">
             <div>
-              <p className="mb-1" style={{ fontSize: "72px", fontWeight: 500, color: "#e8e4dd" }}>+3.51%</p>
-              <p className="text-xs uppercase tracking-widest" style={{ color: "#666360" }}>Trial conversion lift</p>
+              <p className="mb-1" style={{ fontSize: "72px", fontWeight: 500, color: "#ffffff" }}>+3.51%</p>
+              <p className="text-xs uppercase tracking-widest" style={{ color: "#555555" }}>Trial conversion lift</p>
             </div>
-            <div style={{ width: "1px", height: "60px", background: "#2a2a28" }} />
+            <div style={{ width: "1px", height: "60px", background: "#222222" }} />
             <div>
-              <p className="mb-1" style={{ fontSize: "48px", fontWeight: 500, color: "#444440" }}>73.6K</p>
-              <p className="text-xs uppercase tracking-widest" style={{ color: "#666360" }}>Users per variation</p>
+              <p className="mb-1" style={{ fontSize: "48px", fontWeight: 500, color: "#555555" }}>73.6K</p>
+              <p className="text-xs uppercase tracking-widest" style={{ color: "#555555" }}>Users per variation</p>
             </div>
           </div>
         </FadeIn>
 
         {/* HERO IMAGE */}
         <FadeIn delay={0.15}>
-          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ background: "#1a1a18", height: "480px" }}>
+          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ background: "#161616", height: "480px" }}>
             <img src="/images/modal-v2.png?v=2" alt="Winning variation" className="w-full h-full" style={{ objectFit: "contain", cursor: "zoom-in" }} onClick={() => setLightbox("/images/modal-v2.png")} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           </div>
         </FadeIn>
@@ -115,7 +115,7 @@ export default function CaseStudyPaymentModal() {
         {/* PROBLEM */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#e8e4dd" }}>The problem</h2>
+            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The problem</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px]" style={{ color: "#aaa8a4" }}>
               Creative Fabrica's free trial modal had a clean, functional layout — but a significant amount of whitespace below the form was doing nothing. Users were seeing a checkout screen with no reassurance about what they were signing up for, no clarity on when they'd be charged, and no sense of the experience ahead of them. We hypothesized that this dead space was a missed opportunity to reduce anxiety and increase activation.
             </p>
@@ -125,7 +125,7 @@ export default function CaseStudyPaymentModal() {
         {/* APPROACH */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#e8e4dd" }}>The approach</h2>
+            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The approach</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px] mb-4" style={{ color: "#aaa8a4" }}>
               Before designing, we looked at how other subscription products handle trial anxiety at checkout. Products like Canva and Miro use timeline-style explanations to show users exactly what happens after they sign up — and it works. We hypothesized the same pattern could work for Creative Fabrica.
             </p>
@@ -138,7 +138,7 @@ export default function CaseStudyPaymentModal() {
         {/* VARIATIONS */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#e8e4dd" }}>What we tested</h2>
+            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#ffffff" }}>What we tested</h2>
             <div className="flex gap-2 mb-6 flex-wrap">
               {variations.map(v => (
                 <button
@@ -146,22 +146,22 @@ export default function CaseStudyPaymentModal() {
                   onClick={() => setActive(v.id)}
                   className="text-sm rounded-full px-4 py-1.5 transition flex items-center gap-2"
                   style={{
-                    border: `1px solid ${active === v.id ? "#e8e4dd" : "#2a2a28"}`,
-                    color: active === v.id ? "#e8e4dd" : "#666360",
+                    border: `1px solid ${active === v.id ? "#ffffff" : "#222222"}`,
+                    color: active === v.id ? "#ffffff" : "#555555",
                     background: "transparent",
                     cursor: "pointer",
                   }}
                 >
                   {v.label}
                   {v.winner && (
-                    <span className="text-xs px-1.5 py-0.5 rounded-full" style={{ background: "#2a2a28", color: "#888580" }}>Winner</span>
+                    <span className="text-xs px-1.5 py-0.5 rounded-full" style={{ background: "#222222", color: "#888888" }}>Winner</span>
                   )}
                 </button>
               ))}
             </div>
-            <div className="rounded-2xl p-6" style={{ background: "#1a1a18" }}>
-              <p className="mb-6" style={{ color: "#888580", fontSize: "20px", lineHeight: "32px" }}>{variation.description}</p>
-              <div className="w-full rounded-xl overflow-hidden" style={{ background: "#1a1a18", height: "480px" }}>
+            <div className="rounded-2xl p-6" style={{ background: "#161616" }}>
+              <p className="mb-6" style={{ color: "#888888", fontSize: "20px", lineHeight: "32px" }}>{variation.description}</p>
+              <div className="w-full rounded-xl overflow-hidden" style={{ background: "#161616", height: "480px" }}>
                 <img src={variation.image} alt={variation.label} className="w-full h-full rounded-xl" style={{ objectFit: "contain", cursor: "zoom-in" }} onClick={() => setLightbox(variation.image)} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function CaseStudyPaymentModal() {
         {/* WHY IT WORKED */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#e8e4dd" }}>Why Variation 2 won</h2>
+            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>Why Variation 2 won</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px] mb-4" style={{ color: "#aaa8a4" }}>
               Variation 2 stripped away everything except what the user needed at that moment — a clear, scannable answer to 'what am I signing up for?' No feature lists, no distractions. Just the three steps of the trial, presented horizontally so the eye moves through them in seconds.
             </p>
@@ -187,7 +187,7 @@ export default function CaseStudyPaymentModal() {
         {/* LEARNINGS */}
         <FadeIn>
           <div>
-            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#e8e4dd" }}>What I took away</h2>
+            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#ffffff" }}>What I took away</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Context reduces friction", body: "Users don't abandon because they dislike the offer — they abandon because they're uncertain about what happens next. A simple timeline resolved that." },
@@ -195,10 +195,10 @@ export default function CaseStudyPaymentModal() {
                 { n: "03", title: "Sample size matters", body: "Variations 1 and 3 showed stronger directional lift but didn't reach significance. Shipping without significance — even when results look good — is a gamble that always comes back around." },
               ].map((l, i) => (
                 <FadeIn key={l.n} delay={i * 0.08} className="h-full">
-                  <div className="rounded-2xl p-8 h-full" style={{ background: "#1a1a18" }}>
-                    <p className="text-xs mb-3" style={{ color: "#333330" }}>{l.n}</p>
-                    <p className="text-[17px] font-medium mb-3" style={{ color: "#e8e4dd" }}>{l.title}</p>
-                    <p className="mb-0" style={{ color: "#888580", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
+                  <div className="rounded-2xl p-8 h-full" style={{ background: "#161616" }}>
+                    <p className="text-xs mb-3" style={{ color: "#555555" }}>{l.n}</p>
+                    <p className="text-[17px] font-medium mb-3" style={{ color: "#ffffff" }}>{l.title}</p>
+                    <p className="mb-0" style={{ color: "#888888", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -212,14 +212,22 @@ export default function CaseStudyPaymentModal() {
         <div
           onClick={() => setLightbox(null)}
           style={{
-            position: "fixed", inset: 0, background: "rgba(0,0,0,0.9)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            zIndex: 1000, cursor: "zoom-out"
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.9)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+            cursor: "zoom-out",
+            padding: "40px"
           }}
         >
           <img
             src={lightbox}
-            style={{ maxWidth: "90vw", maxHeight: "90vh", objectFit: "contain", borderRadius: "12px" }}
+            style={{ maxWidth: "100%", maxHeight: "90vh", objectFit: "contain", borderRadius: "12px" }}
+            onClick={e => e.stopPropagation()}
+            alt=""
           />
         </div>
       )}
