@@ -83,13 +83,13 @@ export default function CaseStudyZutobi() {
   const experiment = experiments.find(e => e.id === activeExp)!;
 
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 32px 120px" }}>
+    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
       <div>
 
         <FadeIn>
           <div className="mb-28">
             <p className="text-sm mb-4" style={{ color: "#555555" }}>Zutobi · 2022–2025</p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "56px", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: "64px" }}>
               Growth Experiments<br />on Onboarding
             </h1>
             <p style={{ color: "#888888", fontSize: "22px", lineHeight: "34px", maxWidth: "600px" }}>
@@ -135,7 +135,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>The product</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The product</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               Zutobi is a driving education app for the US market. Users install the app, go through onboarding, and hit a paywall before accessing the full course content. The core growth challenge was converting free installs into paying trial subscribers.
             </p>
@@ -144,7 +144,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>The challenge</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The challenge</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               The existing paywall was feature-rich but lacked one thing: clarity about what users were actually signing up for. We ran three sequential experiments, each building on the learnings of the previous one — treating the onboarding and paywall as a system, not isolated screens.
             </p>
@@ -153,7 +153,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-8">
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "40px" }}>What we tested</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-10">
               {experiments.map(e => (
                 <button key={e.id} onClick={() => setActiveExp(e.id)} className="text-sm rounded-full px-4 py-1.5 transition" style={{ border: `1px solid ${activeExp === e.id ? "#ffffff" : "#222222"}`, color: activeExp === e.id ? "#ffffff" : "#555555", background: "transparent", cursor: "pointer" }}>
@@ -272,7 +272,7 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div>
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "40px" }}>What I took away</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What I took away</h2>
             <div className="grid grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Trust reduces friction", body: "Even a single informational block explaining how a trial works can meaningfully lift conversion. Users don't need convincing — they need clarity." },
@@ -305,7 +305,7 @@ export default function CaseStudyZutobi() {
             justifyContent: "center",
             zIndex: 1000,
             cursor: "zoom-out",
-            padding: "40px"
+            padding: "clamp(16px, 4vw, 48px)"
           }}
         >
           <img

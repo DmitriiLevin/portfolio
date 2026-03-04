@@ -91,7 +91,7 @@ export default function CaseStudyFriggy() {
   console.log(features[activeFeature].image);
 
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 32px 120px" }}>
+    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
       <div>
 
         {/* HERO */}
@@ -100,7 +100,7 @@ export default function CaseStudyFriggy() {
             <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 inline-block" />
             Friggy · Product Design · Consumer App
           </p>
-          <h1 className="text-[56px] leading-[64px] font-medium text-[#ffffff] mb-6">
+          <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(32px, 5vw, 56px)" }}>
             Friggy —<br />A Book Summary App
           </h1>
           <p className="text-[20px] leading-[32px] text-[#888888] max-w-[640px] mb-8">
@@ -148,7 +148,7 @@ export default function CaseStudyFriggy() {
         <FadeIn>
           <section className="max-w-[720px]">
             <Label>The problem</Label>
-            <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-6">
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
               The market was crowded — but missing something
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-6">
@@ -163,7 +163,7 @@ export default function CaseStudyFriggy() {
         <FadeIn>
           <section className="max-w-[720px]">
             <Label>Research</Label>
-            <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-6">
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
               What we learned early
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-8">
@@ -194,7 +194,7 @@ export default function CaseStudyFriggy() {
         <FadeIn>
           <section className="max-w-[720px]">
             <Label>Process</Label>
-            <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-6">
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
               Moving fast with a clear framework
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888]">
@@ -208,7 +208,7 @@ export default function CaseStudyFriggy() {
         {/* FEATURES */}
         <FadeIn>
           <Label>Solution</Label>
-          <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-4">
+          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-4" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
             Designed around clarity, focus, and habit
           </h2>
           <p className="text-[18px] leading-[30px] text-[#888888] max-w-[720px] mb-10">
@@ -255,7 +255,7 @@ export default function CaseStudyFriggy() {
         <FadeIn>
           <section className="max-w-[720px]">
             <Label>Outcome</Label>
-            <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-6">
+            <h2 className="leading-[42px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
               Live on iOS, preparing for growth
             </h2>
             <p className="text-[18px] leading-[30px] text-[#888888] mb-6">
@@ -272,7 +272,7 @@ export default function CaseStudyFriggy() {
         {/* LEARNINGS */}
         <FadeIn>
           <Label>Key learnings</Label>
-          <h2 className="text-[32px] leading-[42px] font-medium text-[#ffffff] mb-10">
+          <h2 className="leading-[42px] font-medium text-[#ffffff] mb-10" style={{ fontSize: "clamp(24px, 4vw, 40px)" }}>
             What I took away
           </h2>
         </FadeIn>
@@ -319,7 +319,7 @@ export default function CaseStudyFriggy() {
             justifyContent: "center",
             zIndex: 1000,
             cursor: "zoom-out",
-            padding: "40px"
+            padding: "clamp(16px, 4vw, 48px)"
           }}
         >
           <img

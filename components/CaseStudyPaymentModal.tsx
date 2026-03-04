@@ -63,7 +63,7 @@ export default function CaseStudyPaymentModal() {
   const variation = variations.find(v => v.id === active)!;
 
   return (
-    <main className="w-full flex justify-center px-6">
+    <main className="w-full flex justify-center" style={{ padding: "0 clamp(16px, 4vw, 48px)" }}>
       <div className="w-full max-w-[1100px] py-24">
 
         {/* HERO */}
@@ -72,7 +72,7 @@ export default function CaseStudyPaymentModal() {
             <p className="text-sm mb-4" style={{ color: "#555555" }}>
               Creative Fabrica · 2025
             </p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "56px", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: "64px" }}>
               Free Trial Modal — Timeline Test
             </h1>
             <p className="max-w-[600px]" style={{ color: "#888888", fontSize: "22px", lineHeight: "34px" }}>
@@ -83,7 +83,7 @@ export default function CaseStudyPaymentModal() {
 
         <FadeIn delay={0.05}>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The product</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The product</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               Creative Fabrica is a subscription marketplace for design assets — fonts, graphics, templates, and AI tools for creators. Users sign up for a free trial to get unlimited access, which then converts to a paid subscription.
             </p>
@@ -115,7 +115,7 @@ export default function CaseStudyPaymentModal() {
         {/* PROBLEM */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The problem</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The problem</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px]" style={{ color: "#aaa8a4" }}>
               Creative Fabrica's free trial modal had a clean, functional layout — but a significant amount of whitespace below the form was doing nothing. Users were seeing a checkout screen with no reassurance about what they were signing up for, no clarity on when they'd be charged, and no sense of the experience ahead of them. We hypothesized that this dead space was a missed opportunity to reduce anxiety and increase activation.
             </p>
@@ -125,7 +125,7 @@ export default function CaseStudyPaymentModal() {
         {/* APPROACH */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>The approach</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The approach</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px] mb-4" style={{ color: "#aaa8a4" }}>
               Before designing, we looked at how other subscription products handle trial anxiety at checkout. Products like Canva and Miro use timeline-style explanations to show users exactly what happens after they sign up — and it works. We hypothesized the same pattern could work for Creative Fabrica.
             </p>
@@ -138,7 +138,7 @@ export default function CaseStudyPaymentModal() {
         {/* VARIATIONS */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#ffffff" }}>What we tested</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-6 flex-wrap">
               {variations.map(v => (
                 <button
@@ -171,7 +171,7 @@ export default function CaseStudyPaymentModal() {
         {/* WHY IT WORKED */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="text-[40px] font-medium mb-6" style={{ color: "#ffffff" }}>Why Variation 2 won</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>Why Variation 2 won</h2>
             <p className="text-[18px] leading-[30px] max-w-[680px] mb-4" style={{ color: "#aaa8a4" }}>
               Variation 2 stripped away everything except what the user needed at that moment — a clear, scannable answer to 'what am I signing up for?' No feature lists, no distractions. Just the three steps of the trial, presented horizontally so the eye moves through them in seconds.
             </p>
@@ -187,7 +187,7 @@ export default function CaseStudyPaymentModal() {
         {/* LEARNINGS */}
         <FadeIn>
           <div>
-            <h2 className="text-[40px] font-medium mb-8" style={{ color: "#ffffff" }}>What I took away</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What I took away</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Context reduces friction", body: "Users don't abandon because they dislike the offer — they abandon because they're uncertain about what happens next. A simple timeline resolved that." },
@@ -197,7 +197,7 @@ export default function CaseStudyPaymentModal() {
                 <FadeIn key={l.n} delay={i * 0.08} className="h-full">
                   <div className="rounded-2xl p-8 h-full" style={{ background: "#161616" }}>
                     <p className="text-xs mb-3" style={{ color: "#555555" }}>{l.n}</p>
-                    <p className="text-[17px] font-medium mb-3" style={{ color: "#ffffff" }}>{l.title}</p>
+                    <p className="text-[17px] font-medium mb-3" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>{l.title}</p>
                     <p className="mb-0" style={{ color: "#888888", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
                   </div>
                 </FadeIn>
@@ -220,7 +220,7 @@ export default function CaseStudyPaymentModal() {
             justifyContent: "center",
             zIndex: 1000,
             cursor: "zoom-out",
-            padding: "40px"
+            padding: "clamp(16px, 4vw, 48px)"
           }}
         >
           <img

@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 32px 120px" }}>
+    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
       <section style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
         gap: "80px",
         alignItems: "start"
       }}>
@@ -29,7 +29,7 @@ export default function AboutPage() {
         {/* RIGHT: text */}
         <div style={{ display: "flex", flexDirection: "column", gap: "24px", paddingTop: "8px" }}>
           <h1 style={{
-            fontSize: "40px",
+            fontSize: "clamp(24px, 4vw, 40px)",
             fontWeight: 700,
             color: "#ffffff",
             lineHeight: "1.2",

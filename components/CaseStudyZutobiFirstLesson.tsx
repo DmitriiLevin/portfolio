@@ -49,14 +49,14 @@ export default function CaseStudyZutobiFirstLesson() {
   const variant = variants.find(v => v.id === active)!;
 
   return (
-    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 32px 120px" }}>
+    <main style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px clamp(16px, 4vw, 48px) 120px" }}>
       <div>
 
         {/* HERO */}
         <FadeIn>
           <div className="mb-28">
             <p className="text-sm mb-4" style={{ color: "#555555" }}>Zutobi · 2022–2025</p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "56px", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(32px, 5vw, 56px)", lineHeight: "64px" }}>
               First Lesson Activation
             </h1>
             <p style={{ color: "#888888", fontSize: "22px", lineHeight: "34px", maxWidth: "600px" }}>
@@ -92,7 +92,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* THE PROBLEM */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>The problem</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The problem</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               25% of users cancelled their trial within the first 10 minutes — often before engaging with any core functionality. They subscribed, but never experienced the product's value. The problem wasn't the paywall. It was what happened right after it.
             </p>
@@ -102,7 +102,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* INSIGHT */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>The insight</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The insight</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               Analytics revealed a strong correlation: users who completed the first lesson had a conversion rate of 18.1%, while users who did not complete it converted at only 10.1%. The data pointed to one clear lever — get users to start their first lesson as early as possible.
             </p>
@@ -119,7 +119,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* THE APPROACH */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>The approach</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>The approach</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px" }}>
               We researched how other education apps handle the moment right after subscription — and found that most simply drop users into a home screen. We hypothesized that a focused entry point directly into the first lesson would reduce cognitive load and guide users toward the action most likely to drive retention.
             </p>
@@ -129,7 +129,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* WHAT WE TESTED */}
         <FadeIn>
           <div className="mb-8">
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "40px" }}>What we tested</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-6">
               {variants.map(v => (
                 <button key={v.id} onClick={() => setActive(v.id)} className="text-sm rounded-full px-4 py-1.5 transition" style={{ border: `1px solid ${active === v.id ? "#ffffff" : "#222222"}`, color: active === v.id ? "#ffffff" : "#555555", background: "transparent", cursor: "pointer" }}>
@@ -152,7 +152,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* RESULTS */}
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>Why V2 won</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>Why V2 won</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px", marginBottom: "24px" }}>
               Variant 2 outperformed both the control and Variant 1 across all key metrics. By removing the decision entirely — no pop-up, no extra tap — users were immediately inside the product doing the one thing most likely to make them stay.
             </p>
@@ -164,7 +164,7 @@ export default function CaseStudyZutobiFirstLesson() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "40px" }}>Results</h2>
+            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>Results</h2>
             <p style={{ color: "#aaa8a4", fontSize: "18px", lineHeight: "30px", maxWidth: "680px", marginBottom: "32px" }}>
               V2 outperformed across all key conversion metrics — both Trial-to-Paid and Install-to-Paid improved significantly compared to the baseline and V1.
             </p>
@@ -184,7 +184,7 @@ export default function CaseStudyZutobiFirstLesson() {
         {/* LEARNINGS */}
         <FadeIn>
           <div>
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "40px" }}>What I took away</h2>
+            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(24px, 4vw, 40px)" }}>What I took away</h2>
             <div className="grid grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Retention starts at activation", body: "25% of users cancelled within 10 minutes. The paywall wasn't the problem — it was the empty moment right after it. Fixing activation fixed retention." },
@@ -217,7 +217,7 @@ export default function CaseStudyZutobiFirstLesson() {
             justifyContent: "center",
             zIndex: 1000,
             cursor: "zoom-out",
-            padding: "40px"
+            padding: "clamp(16px, 4vw, 48px)"
           }}
         >
           <img

@@ -52,10 +52,10 @@ export default function Home() {
       <div style={{ 
         maxWidth: "1136px", 
         margin: "0 auto", 
-        padding: "80px 32px 0" 
+        padding: "80px clamp(16px, 4vw, 48px) 0" 
       }}>
         <h1 style={{ 
-          fontSize: "56px", 
+          fontSize: "clamp(32px, 5vw, 56px)", 
           fontWeight: 500, 
           color: "#ffffff", 
           lineHeight: "64px", 
@@ -94,7 +94,7 @@ export default function Home() {
       <div style={{ 
         maxWidth: "1136px", 
         margin: "120px auto 0", 
-        padding: "0 32px 120px"
+        padding: "0 clamp(16px, 4vw, 48px) 120px"
       }}>
         {projects.map((p, i) => {
           const imageSrc = p.image || `https://picsum.photos/seed/${i + 10}/1400/700`;
