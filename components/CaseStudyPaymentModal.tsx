@@ -63,8 +63,8 @@ export default function CaseStudyPaymentModal() {
   const variation = variations.find(v => v.id === active)!;
 
   return (
-    <main className="w-full flex justify-center px-4 md:px-6 overflow-x-hidden">
-      <div className="w-full max-w-[1100px] py-24 max-w-full overflow-hidden">
+    <main className="w-full flex justify-center overflow-x-hidden" style={{ paddingLeft: "max(20px, 32px)", paddingRight: "max(20px, 32px)" }}>
+      <div className="w-full max-w-[1100px] py-24 mx-auto overflow-hidden">
 
         {/* HERO */}
         <FadeIn>
