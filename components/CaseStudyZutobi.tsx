@@ -83,8 +83,8 @@ export default function CaseStudyZutobi() {
   const experiment = experiments.find(e => e.id === activeExp)!;
 
   return (
-    <main className="w-full px-4 md:px-6 overflow-x-hidden" style={{ maxWidth: "1136px", margin: "0 auto", padding: "80px 0 120px" }}>
-      <div className="max-w-full overflow-hidden">
+    <main className="w-full">
+      <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 max(20px, 32px)" }} className="py-24">
 
         <FadeIn>
           <div className="mb-28">

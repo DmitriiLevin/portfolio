@@ -63,8 +63,8 @@ export default function CaseStudyPaymentModal() {
   const variation = variations.find(v => v.id === active)!;
 
   return (
-    <main className="w-full flex justify-center overflow-x-hidden" style={{ paddingLeft: "max(20px, 32px)", paddingRight: "max(20px, 32px)" }}>
-      <div className="w-full max-w-[1100px] py-24 mx-auto overflow-hidden">
+    <main className="w-full">
+      <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 max(20px, 32px)" }} className="py-24">
 
         {/* HERO */}
         <FadeIn>
@@ -197,7 +197,7 @@ export default function CaseStudyPaymentModal() {
                 <FadeIn key={l.n} delay={i * 0.08} className="h-full">
                   <div className="rounded-2xl p-8 h-full" style={{ background: "#161616" }}>
                     <p className="text-xs mb-3" style={{ color: "#555555" }}>{l.n}</p>
-                    <p className="text-[17px] font-medium mb-3" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>{l.title}</p>
+                    <p className="font-medium mb-3" style={{ color: "#ffffff", fontSize: "17px" }}>{l.title}</p>
                     <p className="mb-0" style={{ color: "#888888", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
                   </div>
                 </FadeIn>
