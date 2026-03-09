@@ -68,23 +68,23 @@ export default function CaseStudyPaymentModal() {
 
         {/* HERO */}
         <FadeIn>
-          <div className="mb-32">
+          <div className="mb-32 w-full">
             <p className="text-sm mb-4" style={{ color: "#555555" }}>
               Creative Fabrica · 2025
             </p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
+            <h1 className="font-medium mb-6 w-full" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
               Free Trial Modal — Timeline Test
             </h1>
-            <p className="max-w-full md:max-w-[600px] text-base md:text-xl text-[#888888] leading-relaxed overflow-hidden">
+            <p className="max-w-full text-base md:text-xl text-[#888888] leading-relaxed overflow-hidden" style={{ maxWidth: "680px" }}>
               How adding a "how the trial works" timeline to the payment modal lifted trial conversions by 3.51% across 73K+ users.
             </p>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.05}>
-          <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+          <div className="mb-28 w-full">
+            <h2 className="font-medium mb-6 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
+            <p className="text-base md:text-lg overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Creative Fabrica is a subscription marketplace for design assets — fonts, graphics, templates, and AI tools for creators. Users sign up for a free trial to get unlimited access, which then converts to a paid subscription.
             </p>
           </div>
@@ -121,9 +121,9 @@ export default function CaseStudyPaymentModal() {
 
         {/* PROBLEM */}
         <FadeIn>
-          <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The problem</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", maxWidth: "680px", lineHeight: "1.6" }}>
+          <div className="mb-28 w-full">
+            <h2 className="font-medium mb-6 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The problem</h2>
+            <p className="text-base md:text-lg overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Creative Fabrica's free trial modal had a clean, functional layout — but a significant amount of whitespace below the form was doing nothing. Users were seeing a checkout screen with no reassurance about what they were signing up for, no clarity on when they'd be charged, and no sense of the experience ahead of them. We hypothesized that this dead space was a missed opportunity to reduce anxiety and increase activation.
             </p>
           </div>
@@ -131,12 +131,12 @@ export default function CaseStudyPaymentModal() {
 
         {/* APPROACH */}
         <FadeIn>
-          <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The approach</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+          <div className="mb-28 w-full">
+            <h2 className="font-medium mb-6 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The approach</h2>
+            <p className="text-base md:text-lg overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Before designing, we looked at how other subscription products handle trial anxiety at checkout. Products like Canva and Miro use timeline-style explanations to show users exactly what happens after they sign up — and it works. We hypothesized the same pattern could work for Creative Fabrica.
             </p>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", maxWidth: "680px", lineHeight: "1.6" }}>
+            <p className="text-base md:text-lg overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Instead of guessing which execution would be most effective, we designed three variations — each testing a different level of detail and visual complexity — and ran them simultaneously against the control with a 33/33/33 split.
             </p>
           </div>
@@ -144,8 +144,8 @@ export default function CaseStudyPaymentModal() {
 
         {/* VARIATIONS */}
         <FadeIn>
-          <div className="mb-28">
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What we tested</h2>
+          <div className="mb-28 w-full">
+            <h2 className="font-medium mb-8 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-6 flex-wrap">
               {variations.map(v => (
                 <button
@@ -167,7 +167,7 @@ export default function CaseStudyPaymentModal() {
               ))}
             </div>
             <div className="rounded-2xl p-6" style={{ background: "#161616" }}>
-              <p className="mb-6" style={{ color: "#888888", fontSize: "20px", lineHeight: "32px" }}>{variation.description}</p>
+              <p className="mb-6 overflow-hidden" style={{ color: "#888888", fontSize: "20px", lineHeight: "32px", maxWidth: "680px" }}>{variation.description}</p>
               <div className="w-full rounded-xl overflow-hidden bg-[#161616]" style={{ width: "100%", maxWidth: "100%" }}>
                 <img
                   src={variation.image}
@@ -185,15 +185,15 @@ export default function CaseStudyPaymentModal() {
 
         {/* WHY IT WORKED */}
         <FadeIn>
-          <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>Why Variation 2 won</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+          <div className="mb-28 w-full">
+            <h2 className="font-medium mb-6 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>Why Variation 2 won</h2>
+            <p className="text-base md:text-lg overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Variation 2 stripped away everything except what the user needed at that moment — a clear, scannable answer to 'what am I signing up for?' No feature lists, no distractions. Just the three steps of the trial, presented horizontally so the eye moves through them in seconds.
             </p>
-            <p className="text-base md:text-lg max-w-full overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+            <p className="text-base md:text-lg overflow-hidden mb-4" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               Variation 3 showed the strongest raw lift (+6.32%) but had only 131 users in its sample — far too small to draw conclusions. Variation 1 showed minimal directional lift (+1.11%) with no significance.
             </p>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", maxWidth: "680px", lineHeight: "1.6" }}>
+            <p className="text-base md:text-lg overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6", maxWidth: "680px" }}>
               One tradeoff worth noting: Variation 2 also showed a +12.9% increase in subscription cancellations — a signal we flagged for monitoring post-launch. The test confirmed that reducing uncertainty at checkout improves conversion, but the full retention impact requires longer observation.
             </p>
           </div>
@@ -201,8 +201,8 @@ export default function CaseStudyPaymentModal() {
 
         {/* LEARNINGS */}
         <FadeIn>
-          <div>
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What I took away</h2>
+          <div className="w-full">
+            <h2 className="font-medium mb-8 w-full" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What I took away</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Context reduces friction", body: "Users don't abandon because they dislike the offer — they abandon because they're uncertain about what happens next. A simple timeline resolved that." },
@@ -213,7 +213,7 @@ export default function CaseStudyPaymentModal() {
                   <div className="rounded-2xl p-8 h-full" style={{ background: "#161616" }}>
                     <p className="text-xs mb-3" style={{ color: "#555555" }}>{l.n}</p>
                     <p className="font-medium mb-3" style={{ color: "#ffffff", fontSize: "17px" }}>{l.title}</p>
-                    <p className="mb-0" style={{ color: "#888888", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
+                    <p className="mb-0 overflow-hidden" style={{ color: "#888888", fontSize: "15px", lineHeight: "24px", maxWidth: "680px" }}>{l.body}</p>
                   </div>
                 </FadeIn>
               ))}
