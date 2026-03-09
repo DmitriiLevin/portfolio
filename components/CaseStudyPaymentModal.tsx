@@ -6,26 +6,26 @@ const variations = [
   {
     id: "control",
     label: "Control",
-    description: "Original modal — product benefits, ratings, and reviews only. No explanation of how the free trial works.",
+    description: "Historically, the default paywall — a standard modal with general product info and trust signals at the top.",
     image: "/images/modal-control.png",
   },
   {
     id: "v1",
     label: "Variation 1",
-    description: "Added email reminder field and minimal trust signals below the CTA.",
+    description: "Added a vertical 'How the trial works' section directly below the CTA — an additional trust signal visible at the moment of decision.",
     image: "/images/modal-v1.png",
   },
   {
     id: "v2",
     label: "Variation 2",
     winner: true,
-    description: "Horizontal timeline showing how the free trial works — Today, Day 2 reminder, Day 7 charge. Winner with +3.51% lift.",
+    description: "Horizontal timeline communicating how the trial works — Today, Day 2 reminder, Day 7 charge. Winner with +3.51% lift.",
     image: "/images/modal-v2.png?v=2",
   },
   {
     id: "v3",
     label: "Variation 3",
-    description: "Full vertical timeline with detailed step descriptions and cancellation instructions.",
+    description: "Enhanced timeline with additional UI elements showing trial steps and highlighting where the user currently is in the flow.",
     image: "/images/modal-v3.png?v=2",
   },
 ];
@@ -107,8 +107,8 @@ export default function CaseStudyPaymentModal() {
 
         {/* HERO IMAGE */}
         <FadeIn delay={0.15}>
-          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ background: "#161616", height: "clamp(200px, 40vw, 480px)" }}>
-            <img src="/images/modal-v2.png?v=2" alt="Winning variation" className="w-full h-full" style={{ objectFit: "contain", cursor: "zoom-in" }} onClick={() => setLightbox("/images/modal-v2.png")} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <div className="w-full rounded-2xl mb-28 overflow-hidden flex items-center justify-center bg-[#161616]" style={{ minHeight: "500px" }}>
+            <img src="/images/modal-v2.png?v=2" alt="Winning variation" className="w-full object-contain cursor-pointer" style={{ width: "100%", maxHeight: "500px" }} onClick={() => setLightbox("/images/modal-v2.png")} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           </div>
         </FadeIn>
 
@@ -161,8 +161,8 @@ export default function CaseStudyPaymentModal() {
             </div>
             <div className="rounded-2xl p-6" style={{ background: "#161616" }}>
               <p className="mb-6" style={{ color: "#888888", fontSize: "20px", lineHeight: "32px" }}>{variation.description}</p>
-              <div className="w-full rounded-xl overflow-hidden" style={{ background: "#161616", height: "clamp(200px, 40vw, 480px)" }}>
-                <img src={variation.image} alt={variation.label} className="w-full h-full rounded-xl" style={{ objectFit: "contain", cursor: "zoom-in" }} onClick={() => setLightbox(variation.image)} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="w-full rounded-xl overflow-hidden flex items-center justify-center bg-[#161616]" style={{ minHeight: "500px" }}>
+                <img src={variation.image} alt={variation.label} className="w-full object-contain rounded-xl cursor-pointer" style={{ width: "100%", maxHeight: "500px" }} onClick={() => setLightbox(variation.image)} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
               </div>
             </div>
           </div>
