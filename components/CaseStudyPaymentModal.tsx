@@ -107,8 +107,15 @@ export default function CaseStudyPaymentModal() {
 
         {/* HERO IMAGE */}
         <FadeIn delay={0.15}>
-          <div className="w-full rounded-2xl mb-28 overflow-hidden flex items-center justify-center bg-[#161616]" style={{ minHeight: "500px" }}>
-            <img src="/images/modal-v2.png?v=2" alt="Winning variation" className="w-full object-contain cursor-pointer" style={{ width: "100%", maxHeight: "500px" }} onClick={() => setLightbox("/images/modal-v2.png")} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <div className="w-full rounded-2xl mb-28 overflow-hidden bg-[#161616]" style={{ width: "100%", maxWidth: "100%" }}>
+            <img
+              src="/images/modal-v2.png?v=2"
+              alt="Winning variation"
+              width="100%"
+              style={{ width: "100%", height: "auto", display: "block", cursor: "pointer" }}
+              onClick={() => setLightbox("/images/modal-v2.png")}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+            />
           </div>
         </FadeIn>
 
@@ -161,8 +168,16 @@ export default function CaseStudyPaymentModal() {
             </div>
             <div className="rounded-2xl p-6" style={{ background: "#161616" }}>
               <p className="mb-6" style={{ color: "#888888", fontSize: "20px", lineHeight: "32px" }}>{variation.description}</p>
-              <div className="w-full rounded-xl overflow-hidden flex items-center justify-center bg-[#161616]" style={{ minHeight: "500px" }}>
-                <img src={variation.image} alt={variation.label} className="w-full object-contain rounded-xl cursor-pointer" style={{ width: "100%", maxHeight: "500px" }} onClick={() => setLightbox(variation.image)} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="w-full rounded-xl overflow-hidden bg-[#161616]" style={{ width: "100%", maxWidth: "100%" }}>
+                <img
+                  src={variation.image}
+                  alt={variation.label}
+                  width="100%"
+                  className="rounded-xl cursor-pointer"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                  onClick={() => setLightbox(variation.image)}
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
               </div>
             </div>
           </div>
