@@ -131,7 +131,7 @@ export default function CaseStudyZutobiInstructor() {
             <img
               src="/images/projects/zutobi-instructor/cover.png"
               alt="Zutobi Instructor"
-              style={{ width: "100%", borderRadius: "12px", display: "block" }}
+              style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: "12px" }}
             />
           </div>
         </FadeIn>
@@ -171,7 +171,7 @@ export default function CaseStudyZutobiInstructor() {
             <img
               src="/images/projects/zutobi-instructor/research.png"
               alt="User research interviews"
-              style={{ width: "100%", borderRadius: "12px", display: "block", marginBottom: "40px" }}
+              style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: "12px", marginBottom: "40px" }}
             />
           </div>
         </FadeIn>
@@ -227,13 +227,13 @@ export default function CaseStudyZutobiInstructor() {
               {feature.description}
             </p>
             <p className="text-[14px] leading-[24px] text-[#555555] mb-6 max-w-[640px]">
-              → {feature.rationale}
+              {feature.rationale}
             </p>
             <div onClick={() => setLightbox(features[activeFeature].image)} style={{ cursor: "zoom-in" }}>
               <img
                 src={features[activeFeature].image}
                 alt={features[activeFeature].title}
-                style={{ width: "100%", borderRadius: "12px", display: "block" }}
+                style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", borderRadius: "12px" }}
               />
             </div>
           </div>
