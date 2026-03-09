@@ -82,9 +82,14 @@ export default function CaseStudyZutobiFirstLesson() {
 
         {/* HERO IMAGE */}
         <FadeIn delay={0.15}>
-          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ background: "#161616", height: "clamp(200px, 40vw, 480px)" }}>
-            <div onClick={() => setLightbox("/images/projects/zutobi-first-lesson/cover.png")} style={{ cursor: "zoom-in", width: "100%", height: "100%" }}>
-              <img src="/images/projects/zutobi-first-lesson/cover.png" alt="First lesson activation" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <div className="w-full rounded-2xl mb-28 overflow-hidden bg-[#161616]" style={{ width: "100%", maxWidth: "100%" }}>
+            <div onClick={() => setLightbox("/images/projects/zutobi-first-lesson/cover.png")} style={{ cursor: "zoom-in" }}>
+              <img
+                src="/images/projects/zutobi-first-lesson/cover.png"
+                alt="First lesson activation"
+                style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
             </div>
           </div>
         </FadeIn>
@@ -111,8 +116,18 @@ export default function CaseStudyZutobiFirstLesson() {
 
         {/* ANALYTICS IMAGE */}
         <FadeIn>
-          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ background: "#161616", height: "400px", cursor: "zoom-in" }} onClick={() => setLightbox("/images/projects/zutobi-first-lesson/analytics.png")}>
-            <img src="/images/projects/zutobi-first-lesson/analytics.png" alt="Analytics" className="w-full h-full object-contain p-6" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <div className="w-full rounded-2xl mb-28 overflow-hidden" style={{ width: "100%", maxWidth: "100%" }}>
+            <div
+              onClick={() => setLightbox("/images/projects/zutobi-first-lesson/analytics.png")}
+              style={{ cursor: "zoom-in" }}
+            >
+              <img
+                src="/images/projects/zutobi-first-lesson/analytics.png"
+                alt="Analytics"
+                style={{ width: "100%", height: "auto", borderRadius: "12px", display: "block" }}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+            </div>
           </div>
         </FadeIn>
 
