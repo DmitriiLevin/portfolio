@@ -688,7 +688,15 @@ export default function CaseStudyZutobiOnboarding() {
               <img
                 src="/images/projects/zutobi/paywall-baseline.png"
                 alt="Baseline paywall — before timeline"
-                style={{ width: "100%", borderRadius: "8px", display: "block" }}
+                style={{
+                  width: "100%",
+                  maxHeight: "520px",
+                  objectFit: "contain",
+                  background: "#161614",
+                  border: "1px solid #2a2a28",
+                  borderRadius: "8px",
+                  display: "block",
+                }}
               />
             </div>
             <div>
@@ -707,7 +715,15 @@ export default function CaseStudyZutobiOnboarding() {
               <img
                 src="/images/projects/zutobi/paywall-winner.png"
                 alt="Winning variant with timeline"
-                style={{ width: "100%", borderRadius: "8px", display: "block" }}
+                style={{
+                  width: "100%",
+                  maxHeight: "520px",
+                  objectFit: "contain",
+                  background: "#161614",
+                  border: "1px solid #2a2a28",
+                  borderRadius: "8px",
+                  display: "block",
+                }}
               />
             </div>
           </div>
