@@ -31,7 +31,7 @@ export default function Navbar() {
                   href="/CV_Dmytro_Levin_Product_Designer.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block rounded-full px-3 py-1 text-[18px] font-bold leading-[27px] text-[#888888] transition-colors duration-200 hover:bg-[#e8e8e8] hover:text-[#101010] sm:px-4"
+                  className="inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] text-[#888888] transition-colors duration-200 hover:bg-[#e8e8e8] hover:text-[#101010] sm:px-4"
                 >
                   {label}
                 </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`inline-block rounded-full px-3 py-1 text-[18px] font-bold leading-[27px] transition-colors duration-200 sm:px-4 ${
+                className={`inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] transition-colors duration-200 sm:px-4 ${
                   isActive
                     ? "bg-[#e8e8e8] text-[#101010]"
                     : "text-[#888888] hover:bg-[#e8e8e8] hover:text-[#101010]"

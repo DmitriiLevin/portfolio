@@ -11,12 +11,12 @@ const projects = [
     image: "/images/modal-v2.png",
   },
   {
-    title: "Zutobi – Growth Experiments on Onboarding",
-    description: "Three sequential A/B experiments that improved Install-to-Trial conversion.",
+    title: "Zutobi – Trial Transparency",
+    description: "How transparent trial communication lifted Install-to-Trial conversion by +7% on iOS US.",
     company: "Zutobi",
     year: "2025",
     href: "/case-studies/zutobi-onboarding",
-    image: "/images/projects/zutobi-onboarding/cover.png",
+    image: "/images/projects/zutobi/Examples.png",
   },
   {
     title: "Zutobi – First Lesson Activation",
@@ -64,7 +64,8 @@ export default function Home() {
         }}>
           Hi, I&apos;m Dima Levin
         </h1>
-        <p className="text-xl sm:text-3xl max-w-full min-w-0 break-words overflow-hidden" style={{ 
+        <p className="max-w-full min-w-0 break-words overflow-hidden" style={{ 
+          fontSize: "clamp(18px, 2.5vw, 32px)",
           fontWeight: 400, 
           color: "#888888", 
           lineHeight: "1.25"
@@ -94,19 +95,20 @@ export default function Home() {
         margin: "120px auto 0", 
         padding: "0 max(20px, clamp(16px, 4vw, 48px)) 80px",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+        gridTemplateColumns: "repeat(2, 1fr)",
         gap: "24px"
       }}>
         {projects.map((p, i) => {
           const imageSrc = p.image || `https://picsum.photos/seed/${i + 10}/1400/700`;
-          if (p.href === "/case-studies/payment-modal-timeline") {
-            console.log("Creative Fabrica project image src:", imageSrc);
-          }
           return (
           <Link
             key={i}
             href={p.href || "#"}
-            style={{ display: "block", textDecoration: "none" }}
+            style={{ 
+              display: "block", 
+              textDecoration: "none", 
+              cursor: "pointer",
+            }}
           >
             {/* IMAGE */}
             <div style={{ borderRadius: "12px", overflow: "hidden", width: "100%", aspectRatio: "4/3" }}>
@@ -127,10 +129,10 @@ export default function Home() {
             </div>
             {/* TEXT */}
             <div style={{ padding: "20px 0 0 0" }}>
-              <p style={{ fontSize: "24px", fontWeight: 700, color: "#ffffff", marginBottom: "4px" }}>
+              <p style={{ fontSize: "20px", fontWeight: 500, color: "#ffffff", marginBottom: "4px" }}>
                 {p.title}
               </p>
-              <p style={{ fontSize: "24px", color: "rgb(112, 112, 112)", fontWeight: 400 }}>
+              <p style={{ fontSize: "14px", color: "rgb(112, 112, 112)", fontWeight: 400 }}>
                 {p.company} · {p.year}
               </p>
             </div>

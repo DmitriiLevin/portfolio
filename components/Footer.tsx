@@ -11,6 +11,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center gap-6 sm:gap-8">
           <a
             href="mailto:dmutrui.levin@gmail.com"
+            aria-label="Email"
             className="text-[#888888] hover:text-[#ffffff] transition-colors"
           >
             <Mail size={24} />
@@ -19,6 +20,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/dmytrolevin/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
             className="text-[#888888] hover:text-[#ffffff] transition-colors"
           >
             <Linkedin size={24} />
