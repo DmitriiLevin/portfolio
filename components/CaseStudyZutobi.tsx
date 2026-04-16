@@ -88,11 +88,11 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <p className="text-sm mb-4" style={{ color: "#555555" }}>Zutobi · 2022–2025</p>
-            <h1 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
+            <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>Zutobi · 2022–2025</p>
+            <h1 className="font-medium mb-6" style={{ color: "var(--foreground)", fontSize: "clamp(28px, 5vw, 56px)", lineHeight: "64px" }}>
               Growth Experiments<br />on Onboarding
             </h1>
-            <p className="text-base md:text-xl max-w-full overflow-hidden" style={{ color: "#888888", lineHeight: "1.5" }}>
+            <p className="text-base md:text-xl max-w-full overflow-hidden" style={{ color: "var(--secondary)", lineHeight: "1.5" }}>
               Three sequential A/B experiments that improved Install-to-Trial conversion — and revealed the hidden tradeoffs between clarity, trust, and retention.
             </p>
           </div>
@@ -101,13 +101,13 @@ export default function CaseStudyZutobi() {
         <FadeIn delay={0.1}>
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 mb-28 w-full">
             <div className="w-full md:w-auto">
-              <p className="text-4xl sm:text-6xl md:text-[72px]" style={{ fontWeight: 500, color: "#ffffff", lineHeight: 1 }}>+7%</p>
-              <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Best experiment lift</p>
+              <p className="text-4xl sm:text-6xl md:text-[72px]" style={{ fontWeight: 500, color: "var(--foreground)", lineHeight: 1 }}>+7%</p>
+              <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "var(--muted)" }}>Best experiment lift</p>
             </div>
             <div className="hidden md:block flex-shrink-0" style={{ width: "1px", background: "#222222", alignSelf: "stretch", minHeight: "40px" }} />
             <div className="w-full md:w-auto">
-              <p className="text-4xl sm:text-6xl md:text-[48px]" style={{ fontWeight: 500, color: "#555555", lineHeight: 1 }}>3</p>
-              <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#555555" }}>Sequential experiments</p>
+              <p className="text-4xl sm:text-6xl md:text-[48px]" style={{ fontWeight: 500, color: "var(--muted)", lineHeight: 1 }}>3</p>
+              <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "var(--muted)" }}>Sequential experiments</p>
             </div>
           </div>
         </FadeIn>
@@ -135,8 +135,8 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+            <h2 className="font-medium mb-6" style={{ color: "var(--foreground)", fontSize: "clamp(22px, 4vw, 40px)" }}>The product</h2>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "var(--muted)", lineHeight: "1.6" }}>
               Zutobi is a driving education app for the US market. Users install the app, go through onboarding, and hit a paywall before accessing the full course content. The core growth challenge was converting free installs into paying trial subscribers.
             </p>
           </div>
@@ -144,8 +144,8 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-28">
-            <h2 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>The challenge</h2>
-            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "#aaa8a4", lineHeight: "1.6" }}>
+            <h2 className="font-medium mb-6" style={{ color: "var(--foreground)", fontSize: "clamp(22px, 4vw, 40px)" }}>The challenge</h2>
+            <p className="text-base md:text-lg max-w-full overflow-hidden" style={{ color: "var(--muted)", lineHeight: "1.6" }}>
               The existing paywall was feature-rich but lacked one thing: clarity about what users were actually signing up for. We ran three sequential experiments, each building on the learnings of the previous one — treating the onboarding and paywall as a system, not isolated screens.
             </p>
           </div>
@@ -153,10 +153,10 @@ export default function CaseStudyZutobi() {
 
         <FadeIn>
           <div className="mb-8">
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What we tested</h2>
+            <h2 className="font-medium mb-8" style={{ color: "var(--foreground)", fontSize: "clamp(22px, 4vw, 40px)" }}>What we tested</h2>
             <div className="flex gap-2 mb-10">
               {experiments.map(e => (
-                <button key={e.id} onClick={() => setActiveExp(e.id)} className="text-sm rounded-full px-4 py-1.5 transition" style={{ border: `1px solid ${activeExp === e.id ? "#ffffff" : "#222222"}`, color: activeExp === e.id ? "#ffffff" : "#555555", background: "transparent", cursor: "pointer" }}>
+                <button key={e.id} onClick={() => setActiveExp(e.id)} className="text-sm rounded-full px-4 py-1.5 transition" style={{ border: `1px solid ${activeExp === e.id ? "var(--foreground)" : "var(--border)"}`, color: activeExp === e.id ? "var(--foreground)" : "var(--muted)", background: "transparent", cursor: "pointer" }}>
                   {e.label}
                 </button>
               ))}
@@ -166,15 +166,15 @@ export default function CaseStudyZutobi() {
 
         <FadeIn key={activeExp}>
           <div className="mb-28">
-            <h3 className="font-medium mb-6" style={{ color: "#ffffff", fontSize: "28px" }}>{experiment.title}</h3>
+            <h3 className="font-medium mb-6" style={{ color: "var(--foreground)", fontSize: "28px" }}>{experiment.title}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <div>
-                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Context</p>
-                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.context}</p>
+                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--muted)" }}>Context</p>
+                <p style={{ color: "var(--muted)", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.context}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Hypothesis</p>
-                <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.hypothesis}</p>
+                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--muted)" }}>Hypothesis</p>
+                <p style={{ color: "var(--muted)", fontSize: "16px", lineHeight: "26px" }} className="max-w-full overflow-hidden">{experiment.hypothesis}</p>
               </div>
             </div>
 
@@ -184,10 +184,10 @@ export default function CaseStudyZutobi() {
                   <div
                     key={v.id}
                     className="rounded-2xl p-6 min-w-0"
-                    style={{ background: "#161616" }}
+                    style={{ background: "var(--surface)" }}
                   >
-                    <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#555555" }}>{v.label}</p>
-                    <p style={{ color: "#888888", fontSize: "16px", lineHeight: "26px", marginBottom: "16px" }}>{v.description}</p>
+                    <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--muted)" }}>{v.label}</p>
+                    <p style={{ color: "var(--secondary)", fontSize: "16px", lineHeight: "26px", marginBottom: "16px" }}>{v.description}</p>
                     <div
                       onClick={() => setLightbox(v.image)}
                       style={{ cursor: "zoom-in", width: "100%" }}
@@ -217,12 +217,12 @@ export default function CaseStudyZutobi() {
                 <div
                   key={v.id}
                   className="flex flex-col rounded-2xl p-6 min-w-0"
-                  style={{ background: "#161616" }}
+                  style={{ background: "var(--surface)" }}
                 >
-                  <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "#555555" }}>{v.label}</p>
+                  <p className="text-xs uppercase tracking-widest mb-2" style={{ color: "var(--muted)" }}>{v.label}</p>
                   <p
                     style={{
-                      color: "#888888",
+                      color: "var(--secondary)",
                       fontSize: "16px",
                       lineHeight: "26px",
                       marginBottom: "16px",
@@ -256,23 +256,23 @@ export default function CaseStudyZutobi() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {experiment.metrics.map((m, i) => (
-                <div key={i} className="rounded-xl p-5" style={{ background: "#161616" }}>
-                  <p className="font-medium mb-1" style={{ color: "#ffffff", fontSize: "28px" }}>{m.value}</p>
-                  <p className="text-xs uppercase tracking-widest" style={{ color: "#555555" }}>{m.label}</p>
+                <div key={i} className="rounded-xl p-5" style={{ background: "var(--surface)" }}>
+                  <p className="font-medium mb-1" style={{ color: "var(--foreground)", fontSize: "28px" }}>{m.value}</p>
+                  <p className="text-xs uppercase tracking-widest" style={{ color: "var(--muted)" }}>{m.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-2xl p-6" style={{ background: "#161616", borderLeft: "2px solid #222222" }}>
-              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "#555555" }}>Insight</p>
-              <p style={{ color: "#aaa8a4", fontSize: "16px", lineHeight: "26px" }}>{experiment.insight}</p>
+            <div className="rounded-2xl p-6" style={{ background: "var(--surface)", borderLeft: "2px solid var(--border)" }}>
+              <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "var(--muted)" }}>Insight</p>
+              <p style={{ color: "var(--muted)", fontSize: "16px", lineHeight: "26px" }}>{experiment.insight}</p>
             </div>
           </div>
         </FadeIn>
 
         <FadeIn>
           <div>
-            <h2 className="font-medium mb-8" style={{ color: "#ffffff", fontSize: "clamp(22px, 4vw, 40px)" }}>What I took away</h2>
+            <h2 className="font-medium mb-8" style={{ color: "var(--foreground)", fontSize: "clamp(22px, 4vw, 40px)" }}>What I took away</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { n: "01", title: "Trust reduces friction", body: "Even a single informational block explaining how a trial works can meaningfully lift conversion. Users don't need convincing — they need clarity." },
@@ -280,10 +280,10 @@ export default function CaseStudyZutobi() {
                 { n: "03", title: "Personalization raises the bar", body: "A deeper onboarding flow raised user expectations at the paywall. When the product met that bar — conversion lifted. When it didn't — drop-off increased." },
               ].map((l, i) => (
                 <FadeIn key={l.n} delay={i * 0.08} className="h-full">
-                  <div className="rounded-2xl p-8 h-full" style={{ background: "#161616" }}>
-                    <p className="text-xs mb-3" style={{ color: "#222222" }}>{l.n}</p>
-                    <p className="font-medium mb-3" style={{ color: "#ffffff", fontSize: "17px" }}>{l.title}</p>
-                    <p style={{ color: "#888888", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
+                  <div className="rounded-2xl p-8 h-full" style={{ background: "var(--surface)" }}>
+                    <p className="text-xs mb-3" style={{ color: "var(--muted)" }}>{l.n}</p>
+                    <p className="font-medium mb-3" style={{ color: "var(--foreground)", fontSize: "17px" }}>{l.title}</p>
+                    <p style={{ color: "var(--secondary)", fontSize: "15px", lineHeight: "24px" }}>{l.body}</p>
                   </div>
                 </FadeIn>
               ))}

@@ -14,23 +14,29 @@ export default function ProjectThumbnail({ src, alt, className = "", aspectClass
   const [hasError, setHasError] = useState(false);
 
   const wrapperClass =
-    "relative w-full overflow-hidden rounded-lg bg-neutral-100 shadow-md dark:bg-neutral-800 " +
+    "relative w-full overflow-hidden rounded-lg shadow-md border " +
     aspectClass +
     " " +
     className;
 
+  const wrapperStyle: React.CSSProperties = {
+    background: "var(--surface)",
+    borderColor: "var(--border)",
+  };
+
   if (hasError) {
     return (
       <div
-        className={`${wrapperClass} flex items-center justify-center text-sm text-neutral-500 dark:text-neutral-400`}
+        className={`${wrapperClass} flex items-center justify-center text-sm`}
+        style={wrapperStyle}
       >
-        Image
+        <span style={{ color: "var(--secondary)" }}>Image</span>
       </div>
     );
   }
 
   return (
-    <div className={wrapperClass}>
+    <div className={wrapperClass} style={wrapperStyle}>
       <Image
         src={src}
         alt={alt}

@@ -8,7 +8,7 @@ type Props = {
 export default function Container({ children, className = "" }: Props) {
   return (
     <div
-      className={`mx-auto w-full px-12 ${className}`.trim()}
+      className={`mx-auto w-full max-w-[1080px] px-6 md:px-12 ${className}`.trim()}
     >
       {children}
     </div>

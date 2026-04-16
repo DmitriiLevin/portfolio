@@ -74,14 +74,14 @@ function FadeIn({ children, delay = 0, className = "" }: { children: ReactNode; 
 
 function Label({ children }: { children: ReactNode }) {
   return (
-    <p className="text-xs uppercase tracking-widest text-[#888888] mb-4">
+    <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--muted)" }}>
       {children}
     </p>
   );
 }
 
 function Divider() {
-  return <div className="border-t border-[#222222] my-20" />;
+  return <div className="border-t my-20" style={{ borderColor: "var(--border)" }} />;
 }
 
 export default function CaseStudyFriggy() {
@@ -91,19 +91,29 @@ export default function CaseStudyFriggy() {
   console.log(features[activeFeature].image);
 
   return (
-    <main className="w-full">
-      <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 max(20px, 32px)" }} className="py-24">
+    <main className="w-full" style={{ background: "var(--background)", color: "var(--foreground)" }}>
+      <div style={{ maxWidth: "1080px", margin: "0 auto", padding: "0 48px" }} className="py-24">
 
         {/* HERO */}
         <section className="mb-24">
-          <p className="text-xs uppercase tracking-widest text-[#888888] mb-6 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 inline-block" />
+          <p className="text-xs uppercase tracking-widest mb-6 flex items-center gap-2" style={{ color: "var(--muted)" }}>
+            <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "var(--muted)" }} />
             Friggy · Product Design · Consumer App
           </p>
-          <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(28px, 5vw, 56px)" }}>
+          <h1
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-dm-serif)",
+              fontWeight: 400,
+              color: "var(--foreground)",
+              fontSize: "clamp(44px, 6vw, 72px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.01em",
+            }}
+          >
             Friggy —<br />A Book Summary App
           </h1>
-          <p className="text-base md:text-xl max-w-full overflow-hidden text-[#888888] leading-relaxed mb-8">
+          <p className="text-base md:text-xl max-w-full overflow-hidden leading-relaxed mb-8" style={{ color: "var(--secondary)" }}>
             Designing a personalized reading app that stands out in a crowded market — by putting audio-first experience, habit formation, and personalization ahead of generic content feeds.
           </p>
           <div className="flex flex-wrap gap-6 mb-8">
@@ -122,7 +132,7 @@ export default function CaseStudyFriggy() {
           </div>
           <div className="flex flex-wrap gap-2">
             {["Product Design", "Consumer App", "iOS", "Gamification", "Audio UX", "Personalization"].map(t => (
-              <span key={t} className="text-xs text-[#888888] border border-[#222222] rounded-full px-4 py-1.5">
+              <span key={t} className="text-xs rounded-full px-4 py-1.5" style={{ color: "var(--secondary)", border: "1px solid var(--border)" }}>
                 {t}
               </span>
             ))}

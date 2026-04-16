@@ -16,15 +16,15 @@ export default function TimelineSection({ items }: TimelineSectionProps) {
       {items.map((item, i) => (
         <div key={i} style={{ marginBottom: "48px" }}>
           {item.period && (
-            <p style={{ fontSize: "16px", color: "#555555", marginBottom: "8px" }}>
+            <p style={{ fontSize: "16px", color: "var(--muted)", marginBottom: "8px" }}>
               {item.period}
             </p>
           )}
-          <p style={{ fontSize: "24px", fontWeight: 700, color: "#ffffff", marginBottom: "12px" }}>
+          <p style={{ fontSize: "24px", fontWeight: 700, color: "var(--foreground)", marginBottom: "12px" }}>
             {item.org} — {item.title}
           </p>
           {item.description && (
-            <p style={{ fontSize: "16px", color: "#888888", lineHeight: "26px" }}>
+            <p style={{ fontSize: "16px", color: "var(--secondary)", lineHeight: "26px" }}>
               {item.description}
             </p>
           )}

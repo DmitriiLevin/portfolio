@@ -2,12 +2,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0e0e0e;
-  --foreground: #ffffff;
-  --surface: #161616;
-  --border: #222222;
-  --muted: #555555;
-  --secondary: #888888;
+  --background: #f7f4ef;
+  --foreground: #1c1917;
+  --surface: #ffffff;
+  --border: #e0ddd8;
+  --muted: #9a9690;
+  --secondary: #6b6860;
+  --font-inter: "Inter", sans-serif;
+  --font-dm-serif: "DM Serif Display", serif;
 }
 
 @theme inline {
@@ -17,7 +19,7 @@
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-secondary: var(--secondary);
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter);
   --font-mono: ui-monospace, monospace;
 }
 
@@ -36,14 +38,63 @@
   --color-neutral-950: #0e0e0e;
 }
 
-/* Ensure dark background applies to html when .dark is used */
-html.dark,
-html {
-  background: #0e0e0e;
+body {
+  background: var(--background) !important;
+  color: var(--foreground);
+  font-family: var(--font-inter);
 }
 
-body {
-  background: #0e0e0e !important;
-  color: #ffffff;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+h1,
+h2,
+h3 {
+  font-family: var(--font-dm-serif);
+}
+
+/* Legacy dark Tailwind arbitrary color overrides (to align with the new light case-study system) */
+.text-\[\#ffffff\] {
+  color: var(--foreground) !important;
+}
+.text-\[\#888888\] {
+  color: var(--secondary) !important;
+}
+.text-\[\#555555\] {
+  color: var(--secondary) !important;
+}
+.text-\[\#e8e4dd\] {
+  color: var(--foreground) !important;
+}
+.bg-\[\#161616\] {
+  background: var(--surface) !important;
+}
+.bg-\[\#161614\] {
+  background: var(--surface) !important;
+}
+.border-\[\#222222\] {
+  border-color: var(--border) !important;
+}
+.border-\[\#ffffff\] {
+  border-color: var(--foreground) !important;
+}
+
+/* Case studies placeholder (zinc palette) -> map to project tokens */
+.text-zinc-500 {
+  color: var(--secondary) !important;
+}
+.text-zinc-400 {
+  color: var(--muted) !important;
+}
+.text-zinc-300 {
+  color: var(--muted) !important;
+}
+.text-zinc-700 {
+  color: var(--secondary) !important;
+}
+.text-zinc-600 {
+  color: var(--secondary) !important;
+}
+.border-zinc-200 {
+  border-color: var(--border) !important;
+}
+.border-zinc-100 {
+  border-color: var(--border) !important;
 }

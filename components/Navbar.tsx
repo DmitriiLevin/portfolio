@@ -17,7 +17,8 @@ export default function Navbar() {
       <div className="flex w-full flex-wrap items-center justify-between gap-4 sm:gap-6 lg:gap-8">
         <Link
           href="/"
-          className="text-xl font-normal leading-7 text-[#ffffff] sm:text-2xl sm:leading-9"
+          className="text-xl font-normal leading-7 text-[var(--foreground)] sm:text-2xl sm:leading-9"
+          style={{ fontFamily: "var(--font-dm-serif)", fontWeight: 400 }}
         >
           Dmytro Levin
         </Link>
@@ -31,7 +32,18 @@ export default function Navbar() {
                   href="/CV_Dmytro_Levin_Product_Designer.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] text-[#888888] transition-colors duration-200 hover:bg-[#e8e8e8] hover:text-[#101010] sm:px-4"
+                  className="inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] transition-colors duration-200 sm:px-4"
+                  style={{
+                    color: "var(--secondary)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#f0ece5";
+                    e.currentTarget.style.color = "var(--foreground)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--secondary)";
+                  }}
                 >
                   {label}
                 </a>
@@ -44,11 +56,23 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] transition-colors duration-200 sm:px-4 ${
-                  isActive
-                    ? "bg-[#e8e8e8] text-[#101010]"
-                    : "text-[#888888] hover:bg-[#e8e8e8] hover:text-[#101010]"
-                }`}
+                className="inline-block rounded-full px-3 py-1 text-[18px] font-medium leading-[27px] transition-colors duration-200 sm:px-4"
+                style={{
+                  color: isActive ? "var(--foreground)" : "var(--secondary)",
+                  background: isActive ? "#f0ece5" : "transparent",
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = "#f0ece5";
+                    e.currentTarget.style.color = "var(--foreground)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--secondary)";
+                  }
+                }}
               >
                 {label}
               </Link>

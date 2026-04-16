@@ -73,14 +73,14 @@ function FadeIn({ children, delay = 0, className = "" }: { children: ReactNode; 
 
 function Label({ children }: { children: ReactNode }) {
   return (
-    <p className="text-xs uppercase tracking-widest text-[#888888] mb-4">
+    <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--muted)" }}>
       {children}
     </p>
   );
 }
 
 function Divider() {
-  return <div className="border-t border-[#222222] my-20" />;
+  return <div className="border-t my-20" style={{ borderColor: "var(--border)" }} />;
 }
 
 export default function CaseStudyZutobiInstructor() {
@@ -89,38 +89,48 @@ export default function CaseStudyZutobiInstructor() {
   const feature = features[activeFeature];
 
   return (
-    <main className="w-full">
-      <div style={{ maxWidth: "1136px", margin: "0 auto", padding: "0 max(20px, 32px)" }} className="py-24">
+    <main className="w-full" style={{ background: "var(--background)", color: "var(--foreground)" }}>
+      <div style={{ maxWidth: "1080px", margin: "0 auto", padding: "0 48px" }} className="py-24">
 
         {/* HERO */}
         <section style={{ marginBottom: "80px" }}>
-          <p className="text-xs uppercase tracking-widest text-[#888888] mb-6 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 inline-block" />
+          <p className="text-xs uppercase tracking-widest mb-6 flex items-center gap-2" style={{ color: "var(--muted)" }}>
+            <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "var(--muted)" }} />
             Zutobi · B2B SaaS · Product Design
           </p>
-          <h1 className="leading-[64px] font-medium text-[#ffffff] mb-6" style={{ fontSize: "clamp(28px, 5vw, 56px)" }}>
+          <h1
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-dm-serif)",
+              fontWeight: 400,
+              color: "var(--foreground)",
+              fontSize: "clamp(44px, 6vw, 72px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.01em",
+            }}
+          >
             Zutobi Instructor —<br />A Platform for Driving Schools
           </h1>
-          <p className="text-base md:text-xl max-w-full overflow-hidden text-[#888888] leading-relaxed mb-8">
+          <p className="text-base md:text-xl max-w-full overflow-hidden leading-relaxed mb-8" style={{ color: "var(--secondary)" }}>
             Designing an MVP for US driving schools from zero — replacing spreadsheets with a focused scheduling and student management tool.
           </p>
           <div className="flex flex-wrap gap-6 mb-8">
             <div>
-              <p className="text-xs uppercase tracking-widest text-[#888888] mb-1">Role</p>
-              <p className="text-sm text-[#888888]">Product Designer</p>
+              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Role</p>
+              <p className="text-sm" style={{ color: "var(--secondary)" }}>Product Designer</p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-widest text-[#888888] mb-1">Team</p>
-              <p className="text-sm text-[#888888]">PM, Designer, Developers</p>
+              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Team</p>
+              <p className="text-sm" style={{ color: "var(--secondary)" }}>PM, Designer, Developers</p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-widest text-[#888888] mb-1">Status</p>
-              <p className="text-sm text-[#888888]">Shipped</p>
+              <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--muted)" }}>Status</p>
+              <p className="text-sm" style={{ color: "var(--secondary)" }}>Shipped</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-2">
             {["B2B SaaS", "MVP", "Scheduling", "Student Management", "Driving Schools"].map(t => (
-              <span key={t} className="text-xs text-[#888888] border border-[#222222] rounded-full px-4 py-1.5">{t}</span>
+              <span key={t} className="text-xs rounded-full px-4 py-1.5" style={{ color: "var(--secondary)", border: "1px solid var(--border)" }}>{t}</span>
             ))}
           </div>
         </section>
